@@ -19,10 +19,12 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework import routers
-from main.views import CarView
+from main.views import CarView,CategoryView
 
 router = routers.DefaultRouter()
 router.register('car_list',CarView)
+router.register('category_list',CategoryView)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
